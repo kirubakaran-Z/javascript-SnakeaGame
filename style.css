@@ -1,0 +1,113 @@
+:root {
+  --length: 0.5s;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background-color: #000;
+}
+.start,
+.gameover {
+  width: 40vw;
+  height: 35vw;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  gap: 1px;
+}
+.start h1,
+.gameover h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 0%;
+}
+.start h2,
+.gameover h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 0%;
+}
+.start button,
+.gameover button {
+  height: 5vh;
+  width: 10vw;
+  font-size: 100%;
+}
+.gameover {
+  display: none;
+}
+.screen {
+  height: 40vw;
+  width: 40vw;
+  background-color: rgba(128, 123, 123, 0.815);
+  outline: solid 0.2vw rgb(128, 119, 119);
+}
+.rows {
+  width: 100%;
+  height: 2vw;
+  display: flex;
+}
+.pixcels {
+  border: dotted 0.1vw #000;
+  border-top: 0;
+  border-left: 0;
+  height: 100%;
+  width: 2vw;
+}
+.pixcels:last-child {
+  border-right: 0;
+}
+.food {
+  animation: food 1s linear infinite;
+}
+@keyframes food {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+.snake {
+  background-color: rgba(0, 0, 0, 0.596);
+}
+.speed {
+  display: flex;
+  align-items: center;
+}
+.speed button {
+  height: 3vw;
+  width: 3vw;
+  font-size: 100%;
+}
+.speed .cont {
+  width: 20vw;
+  height: 2vw;
+  margin: 0.2vw;
+  background: rgb(71, 69, 69);
+  overflow: hidden;
+}
+.indicator {
+  height: 2vw;
+  width: 100%;
+  background: rgb(20, 20, 20);
+}
+.score {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 0%;
+  position: absolute;
+  top: 1vw;
+  margin-left: 25vw;
+  display: flex;
+  align-items: center;
+}
